@@ -1,0 +1,413 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f6f9;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+header {
+  background-color: #2c3e50;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  margin: 0 0 10px 0;
+}
+
+header p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #ecf0f1;
+}
+
+
+/* Styling the "Add Expense" section */
+#add-expense-section {
+  background-color: #ffffff;
+  border: 2px solid #3498db;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+#expenses-placeholder-section {
+  background-color: #e8f4f8;
+  border: 2px dashed #7f8c8d;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+
+.input-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+}
+
+.input-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+/* ==========================================
+   EXPENSE TABLE STYLES
+   ========================================== */
+.expense-table {
+    width: 100%;
+    border-collapse: collapse; /* Merges adjacent cell borders */
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+/* Header and Data Cells Padding & Borders */
+.expense-table th, 
+.expense-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #dddddd;
+}
+
+/* Colored Header Row */
+.expense-table thead tr {
+    background-color: #2980b9;
+    color: #ffffff;
+}
+
+/* Alternating Row Background Colors */
+.expense-table tbody tr:nth-child(even) {
+    background-color: #f2f5f8;
+}
+
+/* Base White Background for Odd Rows */
+.expense-table tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+/* ==========================================
+   INTERACTIVE ELEMENT STYLES
+   ========================================== */
+
+/* 1. Cursor Pointer for Buttons */
+.btn {
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #219150; /* Slightly darker green on hover */
+}
+
+/* 2. Hover Style for Table Body Rows */
+.expense-table tbody tr:hover {
+    background-color: #e8f4fc; /* Subtle blue/gray highlight on hover */
+    cursor: default;
+}
+
+/* 3. Collapsible Details & Summary Styling */
+.help-guide {
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    padding: 10px 15px;
+    margin: 15px auto;
+    max-width: 500px;
+    text-align: left;
+}
+
+.help-guide summary {
+    font-weight: bold;
+    color: #2c3e50;
+    cursor: pointer;
+}
+
+.help-guide p {
+    margin-top: 8px;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #555555;
+}
+/* ==========================================
+   5. ADVANCED CSS SELECTORS
+   ========================================== */
+
+/* 1. Descendant Selector */
+/* Targets all <td> elements that are descendants of #expenses-list-section */
+#expenses-list-section td {
+    color: #2c3e50;
+    font-size: 14px;
+}
+
+/* 2. Direct Child Selector */
+/* Targets <label> elements that are direct children of .form-group */
+.form-group > label {
+    font-weight: 600;
+    color: #34495e;
+}
+
+/* 3. Position-based Pseudo-class Selector */
+/* Applies a distinct header highlight to the very first row in the table header */
+.expense-table thead tr:first-child {
+    border-bottom: 3px solid #1f638e;
+}
+
+/* 4. Focus State Pseudo-class */
+/* Highlights input fields and select dropdowns when clicked/focused */
+input:focus, select:focus {
+    border-color: #27ae60;
+    outline: none;
+    box-shadow: 0 0 5px rgba(39, 174, 96, 0.4);
+}
+/* 1. Root Variables for Color Palette */
+:root {
+  --bg-color: #f8f9fa;
+  --card-bg: #ffffff;
+  --text-color: #212529;
+  --text-muted: #6c757d;
+  --primary-color: #2e7d32;
+  --primary-hover: #1b5e20;
+  --table-alt-row: #f1f8e9;
+  --border-color: #e0e0e0;
+}
+
+/* 2. Global Page Background & Text */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Open Sans', sans-serif; /* Replace with your body font */
+  margin: 0;
+  padding: 20px;
+}
+
+/* 3. Main & Section Headings */
+h1, h2, h3 {
+  color: var(--primary-color);
+  font-family: 'Poppins', sans-serif; /* Replace with your heading font */
+  margin-top: 0;
+}
+
+/* 4. Button Styling */
+button, .btn {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover, .btn:hover {
+  background-color: var(--primary-hover);
+}
+
+/* 5. Table Headers & Alternating Rows */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 12px;
+  text-align: left;
+}
+
+td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Alternating Row Color */
+tbody tr:nth-child(even) {
+  background-color: var(--table-alt-row);
+}
+
+/* 6. Form Inputs & Interactive Focus Elements */
+input, select {
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 8px 12px;
+}
+
+input:focus, select:focus {
+  outline: 2px solid var(--primary-color);
+}
+/* ==========================================================================
+   1. COLOR PALETTE & GLOBAL VARIABLES
+   ========================================================================== */
+:root {
+  --bg-color: #f4f6f8;          /* Light cool gray page background */
+  --card-bg: #ffffff;         /* Clean white card containers */
+  --primary-color: #1b5e20;     /* Deep forest green */
+  --primary-hover: #144417;     /* Darker green for interactive states */
+  --text-main: #1f2937;         /* Charcoal dark gray for main text */
+  --text-muted: #6b7280;        /* Medium gray for labels and secondary text */
+  --border-color: #e5e7eb;      /* Soft light gray borders */
+  --table-alt-row: #f8faf9;     /* Subtle green-tinted gray for alternating rows */
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+/* ==========================================================================
+   2. GLOBAL TYPOGRAPHY & BODY RESET
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 32px 16px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Headings Typography */
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--primary-color);
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 1.875rem; /* 30px */
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-size: 1.25rem;  /* 20px */
+  margin-bottom: 16px;
+}
+
+/* ==========================================================================
+   3. CSS BOX MODEL & CARD STYLING
+   ========================================================================== */
+/* Wraps Page Heading, Add Expense Form, and Expense Table into visually distinct cards */
+.card, header, form, .table-container {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+/* ==========================================================================
+   4. FORM & INPUT STYLING
+   ========================================================================== */
+form {
+  display: grid;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+input, select {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  padding: 10px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-main);
+  background-color: #ffffff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(27, 94, 32, 0.15);
+}
+
+/* Cohesive Button Styling */
+button, .btn {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover, .btn:hover {
+  background-color: var(--primary-hover);
+}
+
+/* ==========================================================================
+   5. EXPENSE TABLE STYLING
+   ========================================================================== */
+.table-container {
+  overflow-x: auto; /* Handles responsiveness on smaller screens */
+  padding: 0; /* Remove inner card padding so table fills header cleanly */
+}
+
+.table-container h2 {
+  padding: 24px 24px 0 24px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Inter', sans-serif;
+  text-align: left;
+}
+
+th {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 14px 16px;
+}
+
+td {
+  padding: 14px 16px;
+  font-size: 0.95rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Alternating Row Styling */
+tbody tr:nth-child(even) {
+  background-color: var(--table-alt-row);
+}
+
+/* Remove bottom border on the last row */
+tbody tr:last-child td {
+  border-bottom: none;
+}

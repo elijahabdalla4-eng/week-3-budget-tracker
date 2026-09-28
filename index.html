@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Budget Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <h1>
+        <img src="https://cdn-icons-png.flaticon.com/512/2953/2953363.png" alt="Budget Tracker Logo" width="40">
+        My Budget Tracker
+    </h1>
+    <p>Track your income and expenses in one place.</p>
+    <details class="help-guide">
+        <summary>How to use this tracker</summary>
+        <p>Use the form below to enter the details of your expense, including the name, amount, category, and date. Your saved expenses will appear in the list table below!</p>
+    </details>
+</header>
+
+  <main>
+    <section id="add-expense-section">
+      <h2>Your Expenses</h2>
+      
+      <div class="input-group">
+        <label for="expense-name">Expense Name:</label>
+        <input type="text" id="expense-name" placeholder="e.g., Groceries">
+      </div>
+
+      <div class="input-group">
+        <label for="expense-amount">Amount ($):</label>
+        <input type="number" id="expense-amount" name="expense-amount" placeholder="e.g., 0.00" step="0.01">
+      </div>
+      <div class="form-group">
+        <label for="expense-category">Category:</label>
+        <select id="expense-category" name="expense-category">
+        <option value="" disabled selected>Select category</option>
+                <option value="food">Food</option>
+                <option value="transport">Transport</option>
+                <option value="rent">Rent</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <!-- Add Expense Button -->
+        <button type="button" id="add-expense-btn" class="btn">Add Expense</button>
+    
+</section>
+        <!-- Date Input -->
+        <div class="form-group">
+            <label for="expense-date">Date:</label>
+            <input type="date" id="expense-date" name="expense-date">
+        </div>
+
+      <div class="input-group">
+        <label for="expense-category">Category:</label>
+        <input type="text" id="expense-category" placeholder="e.g., Food, Rent, Transport">
+      </div>
+    </section>
+
+<!-- Your Expenses Section -->
+<section id="expenses-list-section" class="card">
+    <h2>Your Expenses</h2>
+    
+    <!-- Expense Table -->
+    <table class="expense-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Amount</th>
+                <th>Category</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Groceries</td>
+                <td>$85.50</td>
+                <td>Food</td>
+                <td>2026-09-20</td>
+            </tr>
+            <tr>
+                <td>Bus Fare</td>
+                <td>$12.00</td>
+                <td>Transport</td>
+                <td>2026-09-21</td>
+            </tr>
+            <tr>
+                <td>Internet Bill</td>
+                <td>$60.00</td>
+                <td>Utilities</td>
+                <td>2026-09-22</td>
+            </tr>
+            <tr>
+                <td>Movie Night</td>
+                <td>$25.00</td>
+                <td>Entertainment</td>
+                <td>2026-09-24</td>
+            </tr>
+            <tr>
+                <td>Electricity</td>
+                <td>$45.00</td>
+                <td>Utilities</td>
+                <td>2026-09-26</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+<section class="card video-section">
+    <h2>Budgeting Tips</h2>
+    <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/sVKQn2I4HDM"
+        title="YouTube video player - Budgeting Tips" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+</section>
+
+
+</body>
+</html>
